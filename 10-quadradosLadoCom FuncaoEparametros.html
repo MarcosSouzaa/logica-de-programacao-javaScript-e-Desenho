@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>programa2</title>
+</head>
+
+<body>
+    <h1>Quadrados com Margem usando Função</h1>
+    <canvas width="600" height="400"></canvas>
+    <script>        
+
+        function desenhaQuadrado (x, y, cor) {
+
+            var tela = document.querySelector('canvas');
+            var pincel = tela.getContext('2d');
+
+            pincel.fillStyle = cor; //cor do quadrado
+            pincel.fillRect(x, y, 50, 50, );//tamanho Quadrado x e y
+            pincel.fillStroke = 'black'; //cor Margem
+            pincel.strokeRect(x, y, 50, 50); // tamanho margem Quadrada  x e y
+
+        }
+        desenhaQuadrado(0, 0, 'green');
+        desenhaQuadrado(50, 0, 'green');
+        desenhaQuadrado(100, 0, 'green');
+
+    </script>
+</body>
+
+</html>

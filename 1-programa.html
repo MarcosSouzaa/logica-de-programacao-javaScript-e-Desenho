@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas'); //acesso o canvas no html
+    var pincel = tela.getContext('2d');
+   
+    // Desenhando um retângulo dividido em três
+    pincel.fillStyle = 'lightgrey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = 'red';
+    pincel.fillRect(400, 0, 200, 400);
+
+    //Desenhando um triângulo
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath(); // começa um caminho
+    pincel.moveTo(300, 200); // mover a partir dessa coordenada x, y
+    pincel.lineTo(200, 400);// move do centro x 200 para extremidade(altura )y 400
+    pincel.lineTo(400, 400);//x 400 de largura, y 400 de altura
+    pincel.fill();
+
+    //Desenhando um círculo
+    pincel.fillStyle = 'blue',
+    pincel.beginPath();
+    pincel.arc(300, 200, 50, 0, 2*3.14);//vou passar o x, y, 50 tamanho do raio do circulo, 0 sendo o ângulo inicial; 2*3.14 sendo o ângulo final em radiano
+    pincel.fill();
+
+
+</script>
+

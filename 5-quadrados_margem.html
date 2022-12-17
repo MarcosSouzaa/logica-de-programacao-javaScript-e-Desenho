@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrados com Margem</title>
+</head>
+
+<body>
+    <h1>Quadrados com Margem</h1>
+    <canvas width="600" height="400"></canvas>
+    <script>
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = 'green'; //cor do quadrado
+        pincel.fillRect(0, 0, 50, 50);//Quadrado
+
+        pincel.fillStroke = 'black'; //cor Margem
+
+        pincel.fillRect(0, 0, 50, 50); //Quadrado
+        pincel.strokeRect(0, 0, 50, 50);//Margem
+
+        pincel.fillRect(50, 0, 50, 50); //Quadrado
+        pincel.strokeRect(50, 0, 50, 50);//Margem
+
+        pincel.fillRect(100, 0, 50, 50); //Quadrado
+        pincel.strokeRect(100, 0, 50, 50);//Margem
+
+        pincel.fillRect(150, 0, 50, 50); //Quadrado
+        pincel.strokeRect(150, 0, 50, 50);//Margem      
+
+    </script>
+</body>
+
+</html>
